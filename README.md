@@ -80,24 +80,24 @@ enum MoveDirection {
 ### Malovaní za použití zkrácených verzí bloků
 
 #### Bloky
-![Jednoduchý příklad](https://github.com/SmutnyJan/pxt-drawing-extension/blob/master/images/easyexample.png)
+![Jednoduchý příklad](https://github.com/microbit-cz/pxt-drawing-extension/blob/master/images/easyexample.png)
 
 #### Kód
 ```
 input.onGesture(Gesture.TiltRight, function () {
-    drawing.moveInDirection(Smer.Doprava)
+    drawing.moveInDirection(MoveDirection.Right)
 })
 input.onGesture(Gesture.LogoDown, function () {
-    drawing.moveInDirection(Smer.Dolu)
+    drawing.moveInDirection(MoveDirection.Down)
 })
 input.onButtonPressed(Button.A, function () {
     drawing.toogleCursor()
 })
 input.onGesture(Gesture.TiltLeft, function () {
-    drawing.moveInDirection(Smer.Doleva)
+    drawing.moveInDirection(MoveDirection.Left)
 })
 input.onGesture(Gesture.LogoUp, function () {
-    drawing.moveInDirection(Smer.Nahoru)
+    drawing.moveInDirection(MoveDirection.Up)
 })
 input.onButtonPressed(Button.B, function () {
     drawing.clear()
@@ -109,11 +109,12 @@ basic.forever(function () {
     drawing.blinkCursor()
 })
 ```
+Demo [https://github.com/microbit-cz/pxt-drawing-demo-easy](https://github.com/microbit-cz/pxt-drawing-demo-easy)
 
 ### Malovaní za použití vlastních proměnných x a y
 
 #### Bloky
-![Těžší příklad](https://github.com/SmutnyJan/pxt-drawing-extension/blob/master/images/hardexample.png)
+![Těžší příklad](https://github.com/microbit-cz/pxt-drawing-extension/blob/master/images/hardexample.png)
 
 
 #### Kód
@@ -161,5 +162,5 @@ basic.forever(function () {
     drawing.blinkCursor(x, y)
 })
 ```
-
+Demo [https://github.com/microbit-cz/pxt-drawing-demo-hard](https://github.com/microbit-cz/pxt-drawing-demo-hard)
 
